@@ -20,8 +20,9 @@ everything live in a desktop GUI.
   - **Photodiode + reference**: a second diode normalizes out laser intensity drift
   - **Quadrature homodyne**: two photodiodes 90° out of phase; the phase φ = atan2(S₂, S₁) gives
     the direction of motion and sub-fringe resolution instead of a plain fringe count
-- **Position lock** (`thor_main_homodyne_lock.py`): uses the homodyne phase as feedback and
-  actively corrects stage drift, with a configurable deadband that separates real drift from noise
+- **Position lock** (`thor_main_homodyne_lock.py`, experimental): uses the homodyne phase as
+  feedback to correct stage drift, with a configurable deadband that separates real drift from
+  noise. In the thesis, the loop was limited by the mechanical response of the stage.
 - **Calibration routines** for signal levels and thresholds before each measurement
 - **Two stage platforms**: PI stages via the GCS protocol (`pipython`) and Thorlabs Kinesis
   long-travel stages via .NET (`pythonnet`)
