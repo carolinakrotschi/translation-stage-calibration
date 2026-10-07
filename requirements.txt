@@ -1,14 +1,12 @@
 customtkinter
 numpy
-scipy
-pandas
 matplotlib
-PyUSB
-PySerial 
 pillow
-pipython
-pythonnet
-nidaqmx
-git+https://github.com/m-labs/sipyco
-#thorlabs_tsi_sdk or Alternative wrapper git+https://github.com/ARTIQ-Controllers/TSICam
-#put pip install -r requirements.txt into terminal bevor use of programm
+nidaqmx        # NI-DAQmx readout of the photodiodes
+pipython       # PI translation stage (GCS)
+pyserial       # used by pipython for RS-232 connections
+pyusb          # used by pipython for USB connections
+pythonnet      # .NET bridge for the Thorlabs Kinesis stage
+
+# Thorlabs camera SDK: install the bundled copy with
+#   python -m pip install ./thorlabs_tsi_sdk-0.0.8
